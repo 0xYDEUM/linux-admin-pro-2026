@@ -14,7 +14,7 @@
 
 1. Посмотрим, какие блочные устройства у нас есть:
 
-```shell
+```bash
 sudo lshw -short | grep disk
 ```
 
@@ -22,9 +22,56 @@ sudo lshw -short | grep disk
 
 2. Занулим на всякий случай суперблоки:
 
-```shell
+```bash
 mdadm --zero-superblock --force /dev/sd{b,c,d,e,f}
 ```
 
-3. 
+3. Создадим RAID-5 следующей командой:
+
+```bash
+sudo mdadm --create --verbose /dev/md0 -l 5 -n 5 /dev/sd{b,c,d,e,f}
+```
+
 4. 
+
+```bash
+
+```
+
+5. 
+
+```bash
+
+```
+
+6. 
+
+```bash
+
+```
+
+7. 
+
+```bash
+
+```
+
+8. 
+
+```bash
+
+```
+
+9. 
+
+```bash
+
+```
+
+10. 
+
+```bash
+
+```
+
+11. 
