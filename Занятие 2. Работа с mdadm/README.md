@@ -14,4 +14,6 @@
 
 Посмотрим, какие блочные устройства у нас есть:
 
-[!Screen1]()
+`sudo lshw -short | grep disk`
+
+![Screen1]()
