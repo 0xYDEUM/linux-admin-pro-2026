@@ -22,7 +22,7 @@ sudo lshw -short | grep disk
 
 2. Занулим на всякий случай суперблоки:
 
-```bash
+```shell
 mdadm --zero-superblock --force /dev/sd{b,c,d,e,f}
 ```
 
