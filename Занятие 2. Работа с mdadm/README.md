@@ -14,7 +14,9 @@
 
 1. Посмотрим, какие блочные устройства у нас есть:
 
-`sudo lshw -short | grep disk`
+```shell
+sudo lshw -short | grep disk
+```
 
 ![Screen1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%202.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20mdadm/img/1.png)
 
