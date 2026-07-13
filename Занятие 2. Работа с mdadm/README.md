@@ -131,3 +131,14 @@ sudo mkdir -p /raid/part{1,2,3,4,5}
 ```bash
 for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
 ```
+14. Проверим созданные разделы:
+
+```bash
+lsblk /dev/md0
+```
+
+```bash
+sudo blkid /dev/md0p*
+```
+
+![Screen6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%202.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20mdadm/img/6.png)
