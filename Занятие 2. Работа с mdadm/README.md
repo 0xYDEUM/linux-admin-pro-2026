@@ -131,7 +131,7 @@ sudo mkdir -p /raid/part{1,2,3,4,5}
 ```bash
 for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
 ```
-14. Проверим созданные разделы:
+14. Проверим, что разделы действительно созданы и имеют файловые системы:
 
 ```bash
 lsblk /dev/md0
