@@ -88,10 +88,46 @@ sudo mdadm -D /dev/md0
 
 ![Screen5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%202.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20mdadm/img/5.png)
 
-10. 
+10. Создадим раздел GPT на нашем RAID
 
 ```bash
-
+sudo parted -s /dev/md0 mklabel gpt
 ```
 
-11. 
+11. Создаем партиции:
+
+```bash
+sudo parted /dev/md0 mkpart primary ext4 0% 20%
+```
+
+```bash
+sudo parted /dev/md0 mkpart primary ext4 20% 40%
+```
+
+```bash
+sudo parted /dev/md0 mkpart primary ext4 40% 60%
+```
+
+```bash
+sudo parted /dev/md0 mkpart primary ext4 60% 80%
+```
+
+```bash
+sudo parted /dev/md0 mkpart primary ext4 80% 100%
+```
+
+12. Создаём на этих партициях ФС:
+
+```bash
+for i in $(seq 1 5); do sudo mkfs.ext4 /dev/md0p$i; done
+```
+
+13. Смонтируем их по каталогам:
+
+```bash
+sudo mkdir -p /raid/part{1,2,3,4,5}
+```
+
+```bash
+for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
+```
