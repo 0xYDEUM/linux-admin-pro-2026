@@ -48,7 +48,7 @@ mkfs.ext4 /dev/vg_root/lv_root
 mount /dev/vg_root/lv_root /mnt
 ```
 
-![Screen1](1.png)
+![Screen1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/img/1.png)
 
 Этой командой копируем все данные с / раздела в /mnt:
 
@@ -84,7 +84,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 update-initramfs -u
 ```
 
-![Screen2](2.png)
+![Screen2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/img/2.png)
 
 Посмотрим картину с дисками после перезагрузки:
 
@@ -200,7 +200,7 @@ vgremove /dev/vg_root
 pvremove /dev/sdb
 ```
 
-![Screen3](3.png)
+![Screen3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/img/3.png)
 
 3. Выделить том под /home + прописать монтирование в fstab.
 
@@ -238,7 +238,7 @@ mount /dev/ubuntu-vg/lv_home /home/
 echo "`blkid | grep Home | awk '{print $2}'` /home xfs defaults 0 0" >> /etc/fstab
 ```
 
-![Screen4](4-1.png)
+![Screen4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/img/4.png)
 
 4. /home - делаем том для снапшотов и работаем с ними:
 
@@ -278,6 +278,6 @@ mount /dev/mapper/ubuntu--vg-lv_home /home
 ls -al /home
 ```
 
-![Screen5](5-1.png)
+![Screen5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/img/5.png)
 
 Файлы успешно восстановлены с помощью снапшота.
