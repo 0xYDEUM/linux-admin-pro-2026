@@ -73,7 +73,7 @@ zpool create fox4 mirror /dev/sdh /dev/sdi
 zpool list
 ```
 
-![Screen1](1.png)
+![Screen1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/1.png)
 
 Команда zpool status показывает информацию о каждом диске, состоянии сканирования и об ошибках чтения, записи и совпадения хэш-сумм. Команда zpool list показывает информацию о размере пула, количеству занятого и свободного места, дедупликации и т.д. 
 
@@ -120,7 +120,7 @@ zfs list
 zfs get all | grep compressratio | grep -v ref
 ```
 
-![Screen2](2.png)
+![Screen2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/2.png)
 
 Таким образом, у нас получается, что алгоритм gzip-9 самый эффективный по сжатию.
 
@@ -152,13 +152,13 @@ zpool import -d zpoolexport/
 zpool import -d zpoolexport/ otus
 ```
 
-![Screen3](3.png)
+![Screen3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/3.png)
 
 ```bash
 zpool status
 ```
 
-![Screen4](4.png)
+![Screen4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/4.png)
 
 Команда `zpool status` выдаст нам информацию о составе импортированного пула.
 
@@ -208,7 +208,7 @@ zfs get compression otus
 zfs get checksum otus
 ```
 
-![Screen5](5.png)
+![Screen5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/5.png)
 
 3. Работа со снапшотом, поиск сообщения от преподавателя
 
@@ -236,6 +236,6 @@ find /otus/test -name "secret_message"
 cat /otus/test/task1/file_mess/secret_message
 ```
 
-![Screen6](6.png)
+![Screen6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/img/6.png)
 
 Тут мы видим ссылку на курс OTUS, задание выполнено.
