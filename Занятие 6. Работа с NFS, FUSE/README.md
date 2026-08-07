@@ -66,7 +66,7 @@ exportfs -s
 systemctl enable --now nfs-server
 ```
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/1.png)
 ### Настраиваем клиент NFS: 
 
 Заходим на сервер с клиентом.  
@@ -105,7 +105,7 @@ mount | grep mnt
 
 При успехе вывод должен примерно соответствовать этому:
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/2.png)
 
 Обратите внимание на _mountvers=3_, что соответствует NFSv3, как того требует задание.
 
@@ -120,9 +120,9 @@ mount | grep mnt
 * Создаём тестовый файл touch client\_file.   
 * Проверяем, что файл успешно создан.
 
-![IMG3]()
+![IMG3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/3.png)
 
-![IMG4]()
+![IMG4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/4.png)
 
 Если вышеуказанные проверки прошли успешно, это значит, что проблем с правами нет. 
 
@@ -142,7 +142,7 @@ mount | grep mnt
 5. проверяем экспорты exportfs \-s;  
 6. проверяем работу RPC showmount \-a 192.168.50.10.
 
-![IMG5]()
+![IMG5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/5.png)
    
 Проверяем клиент: 
 
@@ -151,12 +151,12 @@ mount | grep mnt
 3. заходим на клиент;  
 4. проверяем работу RPC showmount \-a 192.168.50.10;  
 5. заходим в каталог /mnt/upload;  
-   1. проверяем статус монтирования mount | grep mnt;  
-   2. проверяем наличие ранее созданных файлов;  
-   3. создаём тестовый файл touch final\_check;  
-   4. проверяем, что файл успешно создан.
+   * проверяем статус монтирования mount | grep mnt;  
+   * проверяем наличие ранее созданных файлов;  
+   * создаём тестовый файл touch final\_check;  
+   * проверяем, что файл успешно создан.
 
-![IMG6]()
+![IMG6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/img/6.png)
 
 ### Автоматизированное развертывание: 
 
