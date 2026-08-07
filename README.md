@@ -4,4 +4,4 @@
 - [Занятие 2. Работа с mdadm](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%202.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20mdadm/README.md)
 - [Занятие 3-4. Работа с LVM](https://github.com/0xYDEUM/linux-admin-pro-2026/tree/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%203-4.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20LVM/README.md)
 - [Занятие 5. Работа с ZFS](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%205.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20ZFS/README.md)
-- [Занятие 6. Работа с NFS, FUSE](https://github.com/0xYDEUM/linux-admin-pro-2026/)
+- [Занятие 6. Работа с NFS, FUSE](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%206.%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20NFS%2C%20FUSE/README.md)
