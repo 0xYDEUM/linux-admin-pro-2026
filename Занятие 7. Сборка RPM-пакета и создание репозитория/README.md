@@ -65,13 +65,13 @@ mkdir out && cd out
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS="-Ofast -m64 -march=native -mtune=native -flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_CXX_FLAGS="-Ofast -m64 -march=native -mtune=native -flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_INSTALL_PREFIX=./installed ..
 ```
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/1.png)
 
 ```bash 
 cmake --build . --config Release -j 2 --target brotlienc  
 ```
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/2.png)
 
 ```bash 
 cd ../../../..
@@ -91,7 +91,7 @@ nano nginx.spec
 --add-module=/root/ngx_brotli \
 ```
 
-![IMG3]()
+![IMG3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/3.png)
 
 * По этой [ссылке](https://nginx.org/ru/docs/configure.html) можно посмотреть все доступные опции для сборки.
 
@@ -101,7 +101,7 @@ nano nginx.spec
 rpmbuild -ba nginx.spec -D 'debug_package %{nil}' 
 ```
 
-![IMG4]()
+![IMG4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/4.png)
 
 * Убедимся, что пакеты создались:  
 
@@ -109,7 +109,7 @@ rpmbuild -ba nginx.spec -D 'debug_package %{nil}'
 ll rpmbuild/RPMS/x86_64/
 ```
 
-![IMG5]()
+![IMG5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/5.png)
 
 * Копируем пакеты в общий каталог: 
 
@@ -135,7 +135,7 @@ systemctl start nginx
 systemctl status nginx
 ```
 
-![IMG6]()
+![IMG6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/6.png)
 
 * Далее мы будем использовать его для доступа к своему репозиторию.
 
@@ -200,7 +200,7 @@ lynx http://localhost/repo/
 curl -a http://localhost/repo/
 ```
 
-![IMG7]()
+![IMG7](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/7.png)
 
 * Все готово для того, чтобы протестировать репозиторий.  
 
@@ -246,7 +246,7 @@ dnf makecache
 dnf list | grep otus  
 ```
 
-![IMG8]()
+![IMG8](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/8.png)
 
 * Так как Nginx у нас уже стоит, установим репозиторий percona-release:
 
@@ -254,7 +254,7 @@ dnf list | grep otus
 dnf install -y percona-release.noarch
 ```
 
-![IMG9]()
+![IMG9](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%207.%20%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20RPM-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%20%D0%B8%20%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F/img/9.png)
 
 * **Все прошло успешно.** В случае, если вам потребуется обновить репозиторий (а это делается при каждом добавлении файлов) снова, то выполните команду:
 
