@@ -54,7 +54,7 @@ account default : user
 ```bash
 echo "Тело письма: проверка." | mail -s "Тема письма: проверка." user@home.local
 ```
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2010-11.%20Bash%2C%20grep%20sed%20awk/img/1.png)
 
 ### Формирование скрипта.
 
@@ -236,6 +236,6 @@ awk -F'"' '{print $3}' "$TMP_LOG" | awk '{print $1}' | sort | uniq -c | sort -rn
 mail -s "Веб-сервер: Отчет за $TIME_START" "$EMAIL" < "$REPORT_FILE"
 ```
 
-[Скрипт целиком]()
+[Скрипт целиком](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2010-11.%20Bash%2C%20grep%20sed%20awk/web_report.sh)
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2010-11.%20Bash%2C%20grep%20sed%20awk/img/2.png)
