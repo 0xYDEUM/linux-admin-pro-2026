@@ -43,7 +43,7 @@ for pid_dir in /proc/[0-9]*/; do
 pid=$(basename "$pid_dir")
 ```
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8/img/1.png)
 
 Файл `/proc/[PID]/stat` содержит основную информацию о процессе в одну строку, где данные разделены пробелами
 
@@ -70,7 +70,7 @@ if [ -f "${pid_dir}stat" ]; then
 
 Файл cmdline содержит полную команду, которой был запущен процесс. Однако аргументы внутри него разделены не пробелами, а нулевыми байтами `\0`
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8/img/2.png)
 
 Чтобы корректно прочитаь этот файл воспользуемся командой `xargs -0` она заменяет нулевые байты на пробелы и корректно читает файлы без символа новой строки в конце
 
@@ -115,8 +115,8 @@ source ~/.bashrc
 type ax
 ```
 
-![IMG3]()
+![IMG3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8/img/3.png)
 
-![IMG4]()
+![IMG4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8/img/4.png)
 
-[Скрипт целиком]()
+[Скрипт целиком](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0%D0%BC%D0%B8/ps_ax.sh)
