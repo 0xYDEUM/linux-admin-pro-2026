@@ -72,12 +72,12 @@ systemctl restart nginx
 systemctl status nginx
 ```
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/1.png)
 
 Также можно проверить работу nginx из браузера. Заходим в любой браузер на хосте и переходим по адресу
 http://127.0.0.1:4881
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/2.png)
 
 Проверить статус параметра можно с помощью команды: 
 
@@ -109,7 +109,7 @@ semanage port -a -t http_port_t -p tcp 4881
 
 Теперь перезапускаем службу nginx и проверим её работу:
 
-![IMG3]()
+![IMG3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/3.png)
 
 Приветственная страница в браузере так же открывается.
 
@@ -139,7 +139,7 @@ Audit2allow сформировал модуль, и сообщил нам ком
 semodule -i nginx.pp
 ```
 
-![IMG4]()
+![IMG4](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/4.png)
 
 После добавления модуля nginx запустился без ошибок. При использовании модуля изменения сохранятся после перезагрузки. 
 
@@ -170,7 +170,7 @@ git clone https://github.com/Nickmob/vagrant_selinux_dns_problems.git
 
 После того, как стенд развернется, проверим ВМ с помощью команды: `vagrant status`
 
-![IMG5]()
+![IMG5](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/5.png)
 
 Подключимся к клиенту: `vagrant ssh client`
 
@@ -179,13 +179,18 @@ git clone https://github.com/Nickmob/vagrant_selinux_dns_problems.git
 ```bash
 nsupdate -k /etc/named.zonetransfer.key
 ```
+
 `server 192.168.50.10`
+
 `zone ddns.lab`
+
 `update add www.ddns.lab. 60 A 192.168.50.15`
+
 `send`
+
 `quit`
 
-![IMG6]()
+![IMG6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/6.png)
 
 Изменения внести не получилось. Давайте посмотрим логи SELinux, чтобы понять в чём может быть проблема.
 
@@ -207,7 +212,7 @@ vagrant ssh ns01
 cat /var/log/audit/audit.log | audit2why
 ```
 
-![IMG7]()
+![IMG7](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/7.png)
 
 В логах мы видим, что ошибка в контексте безопасности. Целевой контекст `named_conf_t`.
 
@@ -225,9 +230,10 @@ ls -alZ /var/named/named.localhost
 ls -laZ /etc/named
 ```
 
-![IMG8]()
+![IMG8](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/8.png)
 
 Тут мы также видим, что контекст безопасности неправильный. Проблема заключается в том, что конфигурационные файлы лежат в другом каталоге. 
+
 Посмотреть в каком каталоги должны лежать, файлы, чтобы на них распространялись правильные политики SELinux можно с помощью команды: 
 
 ```bash
@@ -246,40 +252,48 @@ sudo chcon -R -t named_zone_t /etc/named
 ls -laZ /etc/named
 ```
 
-![IMG9]()
+![IMG9](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/9.png)
 
 Попробуем снова внести изменения с клиента:
 
 ```bash
 nsupdate -k /etc/named.zonetransfer.key
 ```
+
 `server 192.168.50.10`
+
 `zone ddns.lab`
+
 `update add www.ddns.lab. 60 A 192.168.50.15`
+
 `send`
+
 `quit`
 
 ```bash
 dig www.ddns.lab
 ```
 
-![IMG10]()
+![IMG10](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/10.png)
 
 Видим, что изменения применились. 
+
 Попробуем перезагрузить хосты и ещё раз сделать запрос с помощью dig: 
 
 ```bash
 dig @192.168.50.10 www.ddns.lab
 ```
 
-![IMG11]()
+![IMG11](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/11.png)
 
 Всё правильно. После перезагрузки настройки сохранились. 
+
 Важно, что мы не добавили новые правила в политику для назначения этого контекста в каталоге. Значит, что при перемаркировке файлов контекст вернётся на тот, который прописан в файле политики.
+
 Для того, чтобы вернуть правила обратно, можно ввести команду: 
 
 ```bash
 restorecon -v -R /etc/named
 ```
 
-![IMG12]()
+![IMG12](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/12.png)
