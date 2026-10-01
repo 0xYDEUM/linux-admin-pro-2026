@@ -180,15 +180,25 @@ git clone https://github.com/Nickmob/vagrant_selinux_dns_problems.git
 nsupdate -k /etc/named.zonetransfer.key
 ```
 
-`server 192.168.50.10`
+```bash
+server 192.168.50.10
+```
 
-`zone ddns.lab`
+```bash
+zone ddns.lab
+```
 
-`update add www.ddns.lab. 60 A 192.168.50.15`
+```bash
+update add www.ddns.lab. 60 A 192.168.50.15
+```
 
-`send`
+```bash
+send
+```
 
-`quit`
+```bash
+quit
+```
 
 ![IMG6](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2011.%20%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%D1%81%20SELinux/img/6.png)
 
@@ -239,7 +249,9 @@ ls -laZ /etc/named
 ```bash
 sudo semanage fcontext -l | grep named
 ```
+
 > /etc/rndc.*              regular file       system_u:object_r:named_conf_t:s0 
+
 > /var/named(/.*)?         all files          system_u:object_r:named_zone_t:s0 
 
 Изменим тип контекста безопасности для каталога `/etc/named`:
@@ -260,15 +272,25 @@ ls -laZ /etc/named
 nsupdate -k /etc/named.zonetransfer.key
 ```
 
-`server 192.168.50.10`
+```bash
+server 192.168.50.10
+```
 
-`zone ddns.lab`
+```bash
+zone ddns.lab
+```
 
-`update add www.ddns.lab. 60 A 192.168.50.15`
+```bash
+update add www.ddns.lab. 60 A 192.168.50.15
+```
 
-`send`
+```bash
+send
+```
 
-`quit`
+```bash
+quit
+```
 
 ```bash
 dig www.ddns.lab
