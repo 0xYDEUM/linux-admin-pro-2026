@@ -19,7 +19,7 @@
 
 Состав ПО: VirtualBox, Vagrant, Ansible, Python.
 
-Создайте каталог Ansible и положите в него этот [Vagrantfile]()
+Создайте каталог Ansible и положите в него этот [Vagrantfile](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B0%D0%B3%D0%B8%20%D1%81%20Ansible/Vagrantfile)
 
 Поднимите управляемый хост командой `vagrant up` и убедитесь, что все прошло успешно и есть доступ по ssh.
 
@@ -55,7 +55,7 @@ nginx ansible_host=127.0.0.1 ansible_port=2222 ansible_private_key_file=.vagrant
 ansible nginx -m ping
 ```
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B0%D0%B3%D0%B8%20%D1%81%20Ansible/img/1.png)
 
 Добавим шаблон для конфига `nginx` по пути `templates/nginx.conf.j2`:
 
@@ -77,7 +77,7 @@ http {
 }
 ```
 
-Результирующий файл [nginx.yml]() 
+Результирующий файл [nginx.yml](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B0%D0%B3%D0%B8%20%D1%81%20Ansible/nginx.yml) 
 
 Теперь запускаем:
 
@@ -85,7 +85,7 @@ http {
 ansible-playbook nginx.yml
 ```
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B0%D0%B3%D0%B8%20%D1%81%20Ansible/img/2.png)
 
 Из консоли ВМ выполним команду и убедимся, что сайт доступен:
 
@@ -93,4 +93,4 @@ ansible-playbook nginx.yml
 curl http://192.168.11.150:8080
 ```
 
-![IMG3]()
+![IMG3](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2012.%20%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B0%D0%B3%D0%B8%20%D1%81%20Ansible/img/3.png)
