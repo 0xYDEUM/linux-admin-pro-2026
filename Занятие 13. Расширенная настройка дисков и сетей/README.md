@@ -38,12 +38,12 @@
 
 ### Выполнение:
 
-[Сам Vagrantfile]()
+[Сам Vagrantfile](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2013.%20%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B4%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%20%D0%B8%20%D1%81%D0%B5%D1%82%D0%B5%D0%B9/Vagrantfile)
 
 Вывод команды `df -h` с запущенной ВМ:
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2013.%20%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B4%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%20%D0%B8%20%D1%81%D0%B5%D1%82%D0%B5%D0%B9/img/1.png)
 
 Вывод команды `netstat -tulpn | grep 8080` с хоста: 
 
-![IMG2]()
+![IMG2](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2013.%20%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B4%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%20%D0%B8%20%D1%81%D0%B5%D1%82%D0%B5%D0%B9/img/2.png)
