@@ -21,7 +21,7 @@
 
 [Dockerfile](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2014.%20Docker/Dockerfile)
 
-[Образ в Docker Hub]()
+[Образ в Docker Hub](https://hub.docker.com/r/0xYDEUM/nginx-custom)
 
 **Определите разницу между контейнером и образом:**
 
