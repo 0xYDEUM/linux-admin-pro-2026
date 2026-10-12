@@ -8,7 +8,7 @@
 
 Создадим Vagrantfile, в котором будут указаны параметры наших ВМ:
 
-[Vagrantfile]()
+[Vagrantfile](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2016.%20PAM/Vagrantfile)
 
 После создания Vagrantfile запустим нашу ВМ командой `vagrant up`. Будет создана одна виртуальная машина.
 
@@ -122,4 +122,4 @@ account required pam_exec.so debug /usr/local/bin/login.sh
 
 Если настройки выполнены правильно, то при логине пользователя otus у Вас должна появиться ошибка. Пользователь otusadm должен подключаться без проблем: 
 
-![IMG1]()
+![IMG1](https://github.com/0xYDEUM/linux-admin-pro-2026/blob/main/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2016.%20PAM/img/1.png)
